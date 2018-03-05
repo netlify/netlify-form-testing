@@ -22,13 +22,56 @@
     <div class="container">
       <div class="py-5 text-center">
         <h2>Testing form</h2>
-        <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        <p class="lead">This form is used for testing Netlify's form collection functionality. Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. The submissions of this form are not encrypted.</p>
       </div>
 
       <div class="row">
         <div class="col-md-12 order-md-1">
-          <h4 class="mb-3">Billing address</h4>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 order-md-1">
           <form name="form-testing" method="post" class="needs-validation" novalidate netlify>
+
+            <h4 class="mb-3">Datalist and Select</h4>
+
+            <div class="mb-3">
+              <label for="myBrowser">What browser do you use?</label>
+              <input list="browsers" id="myBrowser" name="myBrowser" class="form-control" />
+              <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Microsoft Edge">
+              </datalist>
+            </div>
+
+            <div class="mb-3">
+              <label for="Groups">Which version?</label>
+              <select class="custom-select">
+                <optgroup label="Group 1">
+                  <option>Version 1.1</option>
+                </optgroup>
+                <optgroup label="Group 2">
+                  <option>Version 2.1</option>
+                  <option>Version 2.2</option>
+                </optgroup>
+                <optgroup label="Group 3" disabled>
+                  <option>Version 3.1</option>
+                  <option>Version 3.2</option>
+                  <option>Version 3.3</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <hr class="mb-4">
+
+            <h4 class="mb-3">Billing address</h4>
+
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -190,6 +233,10 @@
       </div>
 
     </div>
+
+    <br />
+    <hr class="mb-4">
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
